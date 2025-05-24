@@ -26,6 +26,7 @@ export async function GET(req: NextRequest) {
       quote: getQuoteForWeather(type),
     });
   } catch (err) {
+    console.log(err)
     return NextResponse.json(
       { error: "Weather fetch failed" },
       { status: 500 }
